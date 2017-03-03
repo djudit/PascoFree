@@ -1,0 +1,64 @@
+.top-menu {
+	background: #191919;
+}
+
+	.icon-icon-1 {
+		float: left;
+		margin: 10px 0;
+	}
+
+	.icon-account-circle {
+		float: right;
+		margin: 10px 8px;
+	}
+
+	.top-menu__sing {
+		float: right;
+		margin: 4px 0;
+		padding-right: 14px;
+		border-right: 1px solid #b4b4b4;
+		color: #b4b4b4;
+		font-family: Montserrat, verdana;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 27px;
+	}
+
+	.icon-language {
+		float: right;
+		margin: 10px 8px 10px 14px;
+	}
+
+	.top-menu__lang {
+		float: right;
+		background: url(../images/sprite/keyboard-arrow-down.png);
+		background-position: 100% 50%;
+		background-size: auto auto;
+		background-repeat: no-repeat;
+		width: 5%;
+	}
+
+		.top-menu__lang__item {
+			position: relative;
+			margin: 4px 0;
+		}
+
+		.top-menu__lang__item:hover > .top-menu__lang__sub-menu {
+			visibility: visible;
+			top: 100%;
+		}
+
+			.top-menu__lang__item a {
+				color: #b4b4b4;
+				font-family: Montserrat, verdana;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 27px;
+			}
+
+			.top-menu__lang__sub-menu {
+				position: absolute;
+				top: 0;
+				visibility: hidden;
+				transition: all 0.5s ease;
+			}

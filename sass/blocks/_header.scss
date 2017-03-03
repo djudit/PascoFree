@@ -1,0 +1,40 @@
+header {
+	background: url(../images/pic/layer-66.png);
+	background-size: cover;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	padding-top: 26px;
+}
+
+	.icon-logo {
+		float: left;
+		width: 9.3%;
+	}
+
+	.header-menu__menu {
+		float: left;
+		/*margin: 26px 5.6% 26px 11.2%;*/
+		font-family: Montserrat;
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+		.header-menu__menu a:nth-last-child(2n) {
+			padding-left: 1.4%;
+			color: #ffffff;
+		}
+
+		.header-menu__menu__icon-arrow {
+			display: inline-block;
+		}
+
+	.icon-shopping-cart,
+	.icon-heart-ico,
+	.icon-search-ico {
+		float: right;
+	}
+
+	.icon-heart-ico {
+		border-left: 1px solid #b4b4b4;
+		border-right: 1px solid #b4b4b4;
+	}
