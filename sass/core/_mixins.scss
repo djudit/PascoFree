@@ -1,0 +1,80 @@
+@mixin items-look {
+	background: #FFF;
+	margin-bottom: 22px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+@mixin p1-font {
+	color: #fff;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 27px;
+	font-variant: small-caps;
+}
+
+@mixin txt-align {
+	display: block;
+	text-align: left;
+	padding-left: (18px/1170px)*100%;
+	padding-right: (18px/1170px)*100%;
+}
+
+@mixin autor-font {
+	color: #000;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 27px;
+}
+
+@mixin date-font {
+	color: #212121;
+	font-family: Montserrat;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 27px;
+}
+
+@mixin tit_items-2-3-4_font {
+	color: #000;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+@mixin txt_items-2-3-4_font {
+	color: #000;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+}
+
+@mixin tit_items-5-6-7_font {
+	color: #000;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+@mixin right-date-font {
+	color: #212121;
+	font-family: Montserrat;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+@mixin right-post-font {
+	color: #000;
+	font-family: Montserrat;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+
+

@@ -1,0 +1,85 @@
+.main__left__item-4 {
+		@include items-look;
+	}
+
+	.item-4__img-box {
+		float: left;
+		width: $pic-width;
+		position: relative;
+	}
+
+		.item-4__img-box p:nth-of-type(1) {
+			position: absolute;
+			bottom: 5%;
+			left: 7%;
+			@include p1-font;
+		}
+
+		.item-4__img-box .icon-forum- {
+			position: absolute;
+			bottom: 10%;
+			right: 26%;
+		}
+
+		.item-4__img-box p:nth-of-type(2) {
+			position: absolute;
+			bottom: 5%;
+			right: 23%;
+			@include p1-font;
+		}
+
+		.item-4__img-box .icon-favorite-border {
+			position: absolute;
+			bottom: 10%;
+			right: 12%;
+		}
+
+		.item-4__img-box p:nth-of-type(3) {
+			position: absolute;
+			bottom: 5%;
+			right: 7%;
+			@include p1-font;
+		}
+
+	.item-4__txt {
+		float: right;
+		width: $txt-width;
+	}
+
+		.item-4__txt .title {
+			@include txt-align;
+			@include tit_items-2-3-4_font;
+			margin-top: 10px;
+		}
+
+		.item-4__txt .title + a {
+			@include txt-align;
+			@include txt_items-2-3-4_font;
+			padding-bottom: 10px;
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+		}
+
+		.item-4__txt__autor {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 9px 16px;
+		}
+
+			.icon-photo {
+				padding-left: 10px;
+			}
+
+			.item-4__txt__autor__name {
+				text-align: left;
+				flex-grow: 1;
+			}
+
+				.item-4__txt__autor__name p:first-child {
+					@include autor-font;
+				}
+
+				.item-4__txt__autor__name p:last-child {
+					@include date-font;
+				}

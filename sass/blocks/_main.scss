@@ -1,7 +1,236 @@
+@mixin main-right-font {
+	color: #000;
+	font-family: "Open Sans";
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.main {
+	padding-top: 30px;
+	background: #f5f5f5;
+}
+
 .main__left {
 	float: left;
+	width: (820px/1170px)*100%;
 }
+
+	@import "../components/_item-1.scss";
+	@import "../components/_item-2.scss";
+	@import "../components/_item-3.scss";
+	@import "../components/_item-4.scss";
+	@import "../components/_item-5-6-7.scss";
+	@import "../components/_item-8-9.scss";
+
+	.main__left__more {
+		text-align: right;
+	}
+
+		.main__left__more a:first-child {
+			margin-right: 10px;
+			color: #303f9f;
+			font-family: Montserrat;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 36px;
+		}
 
 .main__right {
 	float: right;
+	width: (290px/1170px)*100%;
+	padding-top: 25px;
+	background: #FFF;
+	padding-left: (30px/1170px)*100%;
+	text-align: left;
 }
+
+	.main__right label:first-child {
+		padding: 10px 20px;
+		border-radius: 22px;
+		border: 1px solid #fff;
+		background-color: #f5f5f5;
+		color: #000;
+		font-family: "Open Sans";
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 26px;
+	}
+
+	h4 {
+		margin-top: 30px;
+		padding-bottom: 12px;
+		color: #3f51b5;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 700;
+		border-bottom: 1px solid #2962ff;
+	}
+
+	.main__right table {
+		@include main-right-font;
+		font-weight: 700;
+	}
+
+		.main__right table tr {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		}
+
+		.main__right table tr:last-child {
+			border-bottom: none;
+		}
+
+			.main__right table tr td:last-child {
+				text-align: right;
+			}
+
+			.main__right table a {
+				@include main-right-font;
+				font-weight: 400;
+			}
+
+		.main__right p {
+			color: #000;
+			font-family: "Open Sans";
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 40px;
+		}
+
+		.main__right p + label {
+			padding: 6px 4px;
+			border-radius: 4px;
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			opacity: 0.38;
+			@include main-right-font;
+			font-weight: 400;
+		}
+
+		.main__right .submit {
+			margin-top: 12px;
+			padding-top: 6px;
+			padding-bottom: 6px;
+			padding-left: (82px/308px)*100%;
+			padding-right: (82px/308px)*100%;
+			border-radius: 4px;
+			background-color: #3f51b5;
+			color: #fff;
+			font-family: Montserrat;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 36px;
+			font-variant: small-caps;
+		}
+
+		.main__right__network {
+			padding-top: 26px;
+			box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.12);
+		}
+
+		.main__right__buttons {
+			margin-top: 20px;
+			margin-bottom: 8px;
+			border: 1px solid #3f51b5;
+			border-radius: 4px;
+			background-color: #3f51b5;
+		}
+
+			.main__right__buttons button {
+				padding-top: 6px;
+				padding-bottom: 6px;
+				/*padding-left: (12px/308px)*100%;
+				padding-right: (12px/308px)*100%;*/
+				color: #fff;
+				font-family: Montserrat;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 30px;
+				font-variant: small-caps;
+			}
+
+			.main__right__buttons button:hover {
+				background-color: #fff;
+				color: #3f51b5;
+			}
+
+			.main__right__buttons button:first-child {
+				padding-left: (18px/308px)*100%;
+				padding-right: (17px/308px)*100%;
+			}
+
+			.main__right__buttons button:last-child {
+				padding-left: (19px/308px)*100%;
+				padding-right: (16px/308px)*100%;
+			}
+
+		.main__right__post-1,
+		.main__right__post-2,
+		.main__right__post-3,
+		.main__right__post-4 {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-content: flex-start;
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+
+		.main__right__post-4 {
+			box-shadow: none;
+		}
+
+			.main__right__post-1 .post-1__txt,
+			.main__right__post-2 .post-2__txt,
+			.main__right__post-3 .post-3__txt,
+			.main__right__post-4 .post-4__txt {
+				position: relative;
+				text-align: left;
+				flex-grow: 1;
+				padding-left: (10px/308px)*100%;
+			}
+
+				.post-1__txt p,
+				.post-2__txt p,
+				.post-3__txt p,
+				.post-4__txt p {
+					@include right-date-font;
+				}
+
+				.post-1__txt h5,
+				.post-2__txt h5,
+				.post-3__txt h5,
+				.post-4__txt h5 {
+					@include right-post-font;
+				}
+
+				.post-1__txt .icon-forum-17,
+				.post-2__txt .icon-forum-17,
+				.post-3__txt .icon-forum-17,
+				.post-4__txt .icon-forum-17 {
+					position: absolute;
+					top: 2%;
+					right: 2%;
+				}
+
+		.tags {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+			.tags a {
+				display: inline-block;
+				text-align: left;
+				margin: 4px 6px;
+				padding: 4px 10px;
+				border-radius: 4px;
+				background-color: #eee;
+				color: #000;
+				font-family: "Open Sans";
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 40px;
+			}
+
+				
+
+		

@@ -4,6 +4,13 @@
 	display: table;
 	overflow: hidden;
 }
+
 img {
 	width: 100%;
+}
+
+.container {
+	max-width: 980px;
+	margin: 0 auto;
+	text-align: center;
 }

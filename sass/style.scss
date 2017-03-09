@@ -2,6 +2,10 @@
 
 @import "_base.scss";
 @import "_icon.scss";
+@import "core/_mixins.scss";
+@import "core/_variables.scss";
 
 @import "blocks/_top.scss";
 @import "blocks/_header.scss";
+@import "blocks/_sort-blog.scss";
+@import "blocks/_main.scss";

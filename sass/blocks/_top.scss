@@ -1,3 +1,11 @@
+@mixin top-font {
+	color: #b4b4b4;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 27px;
+}
+
 .top-menu {
 	background: #191919;
 }
@@ -17,11 +25,7 @@
 		margin: 4px 0;
 		padding-right: 14px;
 		border-right: 1px solid #b4b4b4;
-		color: #b4b4b4;
-		font-family: Montserrat, verdana;
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 27px;
+		@include top-font;
 	}
 
 	.icon-language {
@@ -49,14 +53,11 @@
 		}
 
 			.top-menu__lang__item a {
-				color: #b4b4b4;
-				font-family: Montserrat, verdana;
-				font-size: 16px;
-				font-weight: 400;
-				line-height: 27px;
+				@include top-font;
 			}
 
 			.top-menu__lang__sub-menu {
+				background: #191919;
 				position: absolute;
 				top: 0;
 				visibility: hidden;
