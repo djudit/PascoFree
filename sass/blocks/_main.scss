@@ -21,9 +21,14 @@
 	@import "../components/_item-4.scss";
 	@import "../components/_item-5-6-7.scss";
 	@import "../components/_item-8-9.scss";
+	
+	.title:hover {
+		color: #303f9f;
+	}
 
 	.main__left__more {
 		text-align: right;
+		padding-bottom: 40px;
 	}
 
 		.main__left__more a:first-child {
@@ -230,6 +235,7 @@
 				font-weight: 400;
 				line-height: 40px;
 			}
+
 
 				
 

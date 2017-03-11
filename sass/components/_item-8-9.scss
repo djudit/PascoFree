@@ -80,6 +80,14 @@
 				flex-grow: 1;
 			}
 
+				.item-8__txt__autor__name p:first-child {
+					@include autor-font;
+				}
+
+				.item-8__txt__autor__name p:last-child {
+					@include date-font;
+				}
+
 	.main__left__item-9 {
 		width: (400px/820px)*100%;
 		@include items-look;
@@ -154,3 +162,11 @@
 				text-align: left;
 				flex-grow: 1;
 			}
+
+				.item-9__txt__autor__name p:first-child {
+					@include autor-font;
+				}
+
+				.item-9__txt__autor__name p:last-child {
+					@include date-font;
+				}

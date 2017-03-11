@@ -1,0 +1,47 @@
+.subscribe {
+	background: url(../../images/pic/2-layers-subs.png);
+	background-size: cover;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	padding: 76px 0;
+}
+
+	.subscribe p {
+		display: inline-block;
+		color: #fff;
+		font-family: Montserrat;
+		font-size: 36px;
+		font-weight: 900;
+	}
+
+		.subscribe form {
+			display: inline-block;
+		}
+
+			.subscribe label {
+				padding: 12px;
+				border-radius: 22px;
+				border: 1px solid #fff;
+				background-color: #303030;
+				opacity: 0.38;
+				color: #fff;
+				font-family: "Open Sans";
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 24px;
+			}
+
+			.subscribe button {
+				padding: 10px 12px;
+				box-shadow: 0 17px 24px rgba(48, 63, 159, 0.2);
+				border-radius: 22px;
+				background-color: #303f9f;
+				color: #fff;
+				font-family: Montserrat;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 24px;
+				font-variant: small-caps;
+			}
+
+	
