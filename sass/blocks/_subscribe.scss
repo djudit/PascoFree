@@ -4,10 +4,12 @@
 	background-position: 50% 0;
 	background-repeat: no-repeat;
 	padding: 76px 0;
+	display: flex;
+	
 }
 
 	.subscribe p {
-		display: inline-block;
+		/*display: inline-block;*/
 		color: #fff;
 		font-family: Montserrat;
 		font-size: 36px;
@@ -15,7 +17,7 @@
 	}
 
 		.subscribe form {
-			display: inline-block;
+			/*display: inline-block;*/
 		}
 
 			.subscribe label {
