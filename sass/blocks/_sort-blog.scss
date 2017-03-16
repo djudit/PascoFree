@@ -1,9 +1,24 @@
-@mixin blog-font {
-	color: #000;
-	font-family: Montserrat;
-	font-size: 16px;
-	line-height: 27px;
-	font-variant: small-caps;
+.sort-blog__menu-media {
+	display: none;
+}
+
+.sort-blog__menu-media select {
+		border-radius: 4px;
+		border: 1px solid #000;
+		@include sort-blog-font;
+		opacity: 0.5;
+		padding: 12px;
+		margin-top: 20px;
+		
+	}
+
+@media screen and (max-width: 720px) {
+	.sort-blog__menu {
+		display: none;
+	}
+	.sort-blog__menu-media {
+		display: block;
+	}
 }
 
 .sort-blog {
@@ -16,9 +31,8 @@
 		margin-top: 29px;
 		margin-bottom: 29px;
 		margin-right: (22px/980px)*100%;
-		color: #000;
 		font-weight: 700;
-		@include blog-font;
+		@include sort-blog-font;
 	}
 
 	.sort-blog__menu {
@@ -32,9 +46,8 @@
 			margin: 29px 10px;
 			border-radius: 15px;
 			background: #f5f5f5;
-			color: #000;
 			font-weight: 400;
-			@include blog-font;
+			@include sort-blog-font;
 		}
 
 		.sort-blog__menu a:hover {

@@ -1,9 +1,7 @@
-@mixin top-font {
-	color: #b4b4b4;
-	font-family: Montserrat;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 27px;
+@media screen and (max-width: 420px) {
+	.icon-icon-1 {
+		display: none;
+	}
 }
 
 .top-menu {
@@ -28,7 +26,7 @@
 		@include top-font;
 	}
 
-	.icon-language {
+	.top-menu .icon-language {
 		float: right;
 		margin: 10px 8px 10px 14px;
 	}
@@ -39,7 +37,7 @@
 		background-position: 100% 50%;
 		background-size: auto auto;
 		background-repeat: no-repeat;
-		width: 5%;
+		/*width: 5%;*/
 	}
 
 		.top-menu__lang__item {
@@ -54,6 +52,7 @@
 
 			.top-menu__lang__item a {
 				@include top-font;
+				margin-right: 13px;
 			}
 
 			.top-menu__lang__sub-menu {

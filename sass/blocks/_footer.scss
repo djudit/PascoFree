@@ -1,0 +1,70 @@
+.footer {
+	background: #303030;
+	padding-top: 34px;
+	padding-bottom: 34px;
+}
+
+	.footer .container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+		.footer__menu {
+			width: (725px/1170px)*100%;
+			text-align: left;
+		}
+
+			.footer__menu a {
+				margin-right: (40px/1170px)*100%;
+				padding-bottom: 10px;
+				color: #fff;
+				font-size: 12px;
+				font-weight: 700;
+			}
+
+			.footer__menu a:hover {
+				border-bottom: 3px solid #fff;
+			}
+
+		.footer label {
+			background-image: url(../images/sprite/search-ico-footer.png);
+			background-repeat: no-repeat;
+			background-position: 95% 50%;
+			background-size: auto 60%;
+			padding: 11px;
+			border-radius: 22px;
+			border: 1px solid #fff;
+			color: #fff;
+			opacity: 0.38;
+		}
+
+		.footer label:hover {
+			background-image: none;
+		}
+
+			.footer input {
+				font-size: 14px;
+				font-weight: 300;
+			}
+
+		.footer form {
+			display: inline-block;
+		}
+
+			.footer select {
+				background: #303030;
+				border: none;
+				opacity: 0.5;
+				color: #fff;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 27px;
+				font-variant: small-caps;
+			}
+
+@media screen and (max-width: 640px) {
+	.footer {
+		display: none;
+	}
+}			

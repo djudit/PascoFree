@@ -1,10 +1,3 @@
-@mixin main-right-font {
-	color: #000;
-	font-family: "Open Sans";
-	font-size: 14px;
-	line-height: 40px;
-}
-
 .main {
 	padding-top: 30px;
 	background: #f5f5f5;
@@ -15,16 +8,78 @@
 	width: (820px/1170px)*100%;
 }
 
+	.main__left__item-1,
+	.main__left__item-2,
+	.main__left__item-3,
+	.main__left__item-4 {
+		margin-bottom: 22px;
+	}
+
 	@import "../components/_item-1.scss";
 	@import "../components/_item-2.scss";
 	@import "../components/_item-3.scss";
 	@import "../components/_item-4.scss";
-	@import "../components/_item-5-6-7.scss";
-	@import "../components/_item-8-9.scss";
 	
+	.item__img-box {
+	position: relative;
+}
+
+	.main__left__item-os {
+		@include p1-font;
+		position: absolute;
+		bottom: 2%;
+		left: 3%;
+		z-index: 5;
+		width: 94%;
+	}
+
+	@media screen and (max-width: 650px) {
+		.main__left__item-os {
+			display: none;
+		}
+	}
+
+	.main__left__item-os p {
+			float: right;
+		}
+
+		.main__left__item-os .icon-forum-,
+		.main__left__item-os .icon-favorite-border {
+			float: right;
+			margin-top: 3px;
+			margin-right: 3px;
+		}
+
+		.main__left__item-os p:first-child {
+			float: left;
+		}
+
 	.title:hover {
 		color: #303f9f;
 	}
+
+	.item__autor {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 9px 16px;
+	}
+		.item__autor__txt {
+			text-align: left;
+			flex-grow: 1;		
+		}
+		.item__autor__txt p:first-child {
+			@include autor-font;
+		}
+		.item__autor__txt p:last-child {
+			@include date-font;
+		}
+		.main__left .icon-photo,
+		.main__left .icon-photo-1,
+		.main__left .icon-photo-2 {
+			padding-left: 10px;
+		}
 
 	.main__left__more {
 		text-align: right;
@@ -50,6 +105,10 @@
 }
 
 	.main__right label:first-child {
+		background-image: url(../images/sprite/2-layers.png);
+		background-repeat: no-repeat;
+		background-position: 95% 50%;
+		background-size: auto 80%;
 		padding: 10px 20px;
 		border-radius: 22px;
 		border: 1px solid #fff;
@@ -61,11 +120,14 @@
 		line-height: 26px;
 	}
 
-	h4 {
+	.main__right label:first-child:hover {
+		background-image: none;
+	}
+
+	.main__right h4 {
 		margin-top: 30px;
 		padding-bottom: 12px;
 		color: #3f51b5;
-		font-family: Montserrat;
 		font-size: 18px;
 		font-weight: 700;
 		border-bottom: 1px solid #2962ff;
@@ -119,7 +181,6 @@
 			border-radius: 4px;
 			background-color: #3f51b5;
 			color: #fff;
-			font-family: Montserrat;
 			font-size: 18px;
 			font-weight: 400;
 			line-height: 36px;
@@ -145,7 +206,6 @@
 				/*padding-left: (12px/308px)*100%;
 				padding-right: (12px/308px)*100%;*/
 				color: #fff;
-				font-family: Montserrat;
 				font-size: 12px;
 				font-weight: 400;
 				line-height: 30px;
@@ -237,6 +297,31 @@
 			}
 
 
+@media screen and (max-width: 970px) {
+	.main__left,
+	.main__right {
+		float: none;
+		width: (280px/320px)*100%;
+		margin: 0 auto;
+	}
+
+	.main__right label:first-child,
+	.main__right h4:nth-of-type(2),
+	.main__right h4:nth-of-type(3),
+	.main__right .main__right__subscribe,
+	.main__right__network,
+	.main__right__buttons,
+	.main__right__post-1,
+	.main__right__post-2,
+	.main__right__post-3,
+	.main__right__post-4 {
+		display: none;
+	}
+
+	.main__right table tr td:last-child {
+		padding-right: 20px;
+	}
+}
 				
 
 		

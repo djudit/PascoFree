@@ -1,48 +1,147 @@
-@mixin header-font-small {
-	color: #b4b4b4;
-	font-family: Montserrat;
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 27px;
+.menu-btn {
+		width: 91px;
+		height: 18px;
+		display: none;
+		background: url(../images/sprite/logo.png);
+		background-size: cover;
+		margin: 0;
+		padding: 0;
+	}
+	#menu-checkbox {
+		display: none;
+	}
+
+@media screen and (max-width: 1020px) {
+	.icon-logo {
+		display: none;
+	}
+	.header-menu {
+		position: relative;
+	}
+	.menu-btn {
+		display: block;
+		position: absolute;
+		left: 2%;
+	}
+	.menu-btn:hover {
+		cursor: pointer;
+	}
+	.header-menu__menu {
+		visibility: hidden;
+		position: absolute;
+		top: 5%;
+		left: 10%;
+		transition: all 0.5s ease;
+	}
+	.header-menu__menu a {
+		display: block;
+		margin-bottom: 6px;
+	}
+}
+
+#menu-checkbox:checked ~ nav {
+	visibility: visible;
+	position: absolute;
+	top: 100%;
+	left: 10%;
+	width: 40%;
+	background: rgba(100, 100, 100, 0.7);
+	text-align: left;
+}
+
+#menu-checkbox:checked ~ nav a:hover {
+		border-bottom: none;
+		color: #303f9f;
+	}
+
+@keyframes anim-bg {
+	0% {
+		background: url(../images/pic/layer-66.png);
+		@include for_anim-bg;
+	}
+	100% {
+		background: url(../images/pic/2-layers.png);
+		@include for_anim-bg;
+	}
 }
 
 header {
-	background: url(../images/pic/layer-66.png);
-	background-size: cover;
-	background-position: 50% 0;
-	background-repeat: no-repeat;
-	padding-top: 26px;
-	padding-bottom: 68px;
+		animation-name: anim-bg;
+		animation-duration: 5s;
+		animation-delay: 5s;
+		animation-fill-mode: forwards;
 }
 
 	.icon-logo {
 		float: left;
-		width: 9.3%;
+		/*width: 9.3%;*/
 	}
 
 	.header-menu__menu {
 		float: left;
 		width: 70%;
-		margin-left: 7%;
-		font-family: Montserrat;
+		margin-left: 1%;
 		font-size: 14px;
 		font-weight: 700;
 	}
 
-		.header-menu__menu a:nth-last-child(2n) {
+		.header-menu__menu a {
 			padding-left: 1.5%;
-			padding-bottom: 25px;
+			/*padding-bottom: (25px/1170px)*100%;*/
+			padding-bottom: 15px;
 			color: #fff;
 		}
 
 		.header-menu__menu a:hover {
 			border-bottom: 4px solid #ff4081;
 		}
+			.menu {
+				/*width: (125px/745px)*100%;*/
+				display: inline-block;
+			}
 
-		.header-menu__menu__icon-arrow {
-			display: inline-block;
-			margin-left: 0.6%;
-		}
+			.menu-item {
+				position: relative;
+			}
+
+			.menu-item a {
+				padding-bottom: 15px;
+			}
+
+			.menu-item:hover > .menu-sub-menu {
+				visibility: visible;
+				top: 245%;
+			}
+
+			.menu-sub-menu {
+				display: inline-block;
+				/*width: (125px/745px)*100%;*/
+				position: absolute;
+				top: 0;
+				left: 0;
+				visibility: hidden;
+				transition: all 0.5s ease;
+			}
+
+				.menu-sub-menu a {
+					font-size: 12px;
+				}
+
+				.menu-sub-menu a:hover {
+					border-bottom: none;
+					color: #ff4081;
+				}
+
+				@media screen and (max-width: 1020px) {
+					.menu-sub-menu {
+						top: 50%;
+					}
+					.menu-item:hover > .menu-sub-menu {
+						visibility: visible;
+						top: 50%;
+						left: 150%;
+					}
+				}
 
 	.icon-shopping-cart,
 	.icon-heart-ico,
@@ -59,24 +158,35 @@ header {
 		padding-right: 0.6%;
 	}
 
-	.header-menu + p:nth-of-type(1) {
-		margin-top: 245px;
+	@keyframes anim-p {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.header-txt-1 {
+		margin-top: (245px/1170px)*100%;
 		margin-bottom: 29px;
 		color: #b4b4b4;
-		font-family: Montserrat;
 		font-size: 28px;
 		font-weight: 400;
 		line-height: 27px;
 		font-variant: small-caps;
+		@include for_anim-p_header;
 	}
 
-	.header-menu ~ h2 {
-		margin-bottom: 42px;
+	.header-txt-2 {
+		margin-bottom: (42px/1170px)*100%;
 		color: #fff;
-		font-family: Montserrat;
 		font-size: 42px;
 		font-weight: 900;
 		line-height: 50px;
+		animation-name: anim-p;
+		animation-duration: 10s;
+		animation-delay: 10s;
 	}
 
 	.header-menu__btn {
@@ -84,14 +194,23 @@ header {
 		border-radius: 22px;
 		background-color: #303f9f;
 		padding: 16px 0;
+		@include for_anim-p_header;
+	}
+
+	.header-menu__btn:hover {
+		background-color: #0080ff;
+	}
+
+	.header-menu__btn:active {
+		box-shadow: 0 17px 24px rgba(94, 96, 104, 0.2);
 	}
 
 		.header-menu__btn a {
 			padding: 16px 28px;
-			font-family: Montserrat;
 			font-size: 18px;
 			font-weight: 400;
 			font-variant: small-caps;
+			@include for_anim-p_header;
 		}
 
 		.icon-photo-copy-3 {
@@ -99,30 +218,34 @@ header {
 			margin: 80px auto 19px;
 		}
 
-		.header-menu ~ h3 {
+		.header-autor {
 			color: #fff;
-			font-family: Montserrat;
 			font-size: 14px;
 			font-weight: 700;
 			line-height: 27px;
+			@include for_anim-p_header;
 		}
 
-		.header-menu ~ p:nth-of-type(2) {
+		.header-date {
 			margin-top: 15px;
 			margin-bottom: 35px;
 			@include header-font-small;
+			@include for_anim-p_header;
 		}
 
 		.os a {
 			@include header-font-small;
 		}
 
-		.icon-forum- {
+		.os .icon-forum- {
 			margin-right: 6px;
 		}
 
-		.icon-favorite-border {
+		.os .icon-favorite-border {
 			margin-left: 30px;
 			margin-right: 6px;
 		}
+
+
+
 
