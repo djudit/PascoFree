@@ -9,4 +9,11 @@
 @import "blocks/_header.scss";
 @import "blocks/_sort-blog.scss";
 @import "blocks/_main.scss";
+
+.photogallery {
+		overflow: hidden;
+	}
+
 @import "blocks/_subscribe.scss";
+@import "blocks/_bottom.scss";
+@import "blocks/_footer.scss";
