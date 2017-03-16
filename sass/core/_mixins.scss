@@ -1,12 +1,40 @@
-@mixin items-look {
-	background: #FFF;
-	margin-bottom: 22px;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+@mixin top-font {
+	color: #b4b4b4;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 27px;
+}
+
+@mixin header-font-small {
+	color: #b4b4b4;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 27px;
+}
+
+@mixin for_anim-bg {
+	background-size: cover;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	padding-top: 26px;
+	padding-bottom: 68px;
+}
+
+@mixin for_anim-p_header {
+	animation-name: anim-p;
+	animation-duration: 18s;
+	animation-delay: 10s;
+}
+
+@mixin sort-blog-font {
+	color: #000;
+	font-size: 16px;
+	line-height: 27px;
+	font-variant: small-caps;
 }
 
 @mixin p1-font {
 	color: #fff;
-	font-family: Montserrat;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 27px;
@@ -22,7 +50,6 @@
 
 @mixin autor-font {
 	color: #000;
-	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 27px;
@@ -36,7 +63,7 @@
 	line-height: 27px;
 }
 
-@mixin tit_items-2-3-4_font {
+@mixin tit_items-2_font {
 	color: #000;
 	font-family: Montserrat;
 	font-size: 16px;
@@ -44,7 +71,7 @@
 	line-height: 26px;
 }
 
-@mixin txt_items-2-3-4_font {
+@mixin txt_items-2_font {
 	color: #000;
 	font-family: "Open Sans";
 	font-size: 14px;
@@ -52,17 +79,22 @@
 	line-height: 21px;
 }
 
-@mixin tit_items-5-6-7_font {
+@mixin tit_items-3_font {
 	color: #000;
-	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 24px;
 }
 
+@mixin main-right-font {
+	color: #000;
+	font-family: "Open Sans";
+	font-size: 14px;
+	line-height: 40px;
+}
+
 @mixin right-date-font {
 	color: #212121;
-	font-family: Montserrat;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 16px;
@@ -70,7 +102,6 @@
 
 @mixin right-post-font {
 	color: #000;
-	font-family: Montserrat;
 	font-size: 12px;
 	font-weight: 700;
 	line-height: 16px;
